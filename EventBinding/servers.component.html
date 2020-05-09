@@ -1,4 +1,10 @@
 <button class="btn btn-primary"  (click)="onServerCreation()">Click</button>
 <h3>{{serverCreated}}</h3>
+
+<input type="text"
+class="form-control"
+(input)= "onUpdateServerName($event)">
 <app-server>
 </app-server>
+
+<h4>{{serverName}}</h4>

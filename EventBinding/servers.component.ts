@@ -9,7 +9,7 @@ export class ServersComponent implements OnInit {
 
   buttonDisabled : boolean = false;
   serverCreated = "Not yet!"
-
+serverName= "";
   constructor() { 
     setTimeout(() => {this.buttonDisabled = true},3000);
   }
@@ -18,5 +18,9 @@ export class ServersComponent implements OnInit {
   }
 onServerCreation () {
 this.serverCreated = "i'm created now";
+}
+
+onUpdateServerName (event: Event) {
+this.serverName = (<HTMLInputElement>event.target).value;
 }
 }
