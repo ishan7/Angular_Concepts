@@ -1,0 +1,18 @@
+<button class="btn btn-primary"  (click)="onServerCreation()">Click</button>
+<h3>{{serverCreated}}</h3>
+<!-- 
+<input type="text"
+class="form-control"
+(input)= "onUpdateServerName($event)"> -->
+
+
+<input type="text"
+class="form-control"
+[(ngModel)] = "serverName">
+
+<button class="btn btn-primary" [disabled] = "serverName === ''" (click)="onResetInput()">To Reset</button>
+
+<h3 *ngIf = "isClicked; else noServer">Server was created with Server Name {{serverName}} </h3>
+<ng-template #noServer>
+    <h3>no Server is created so far</h3>
+</ng-template>
