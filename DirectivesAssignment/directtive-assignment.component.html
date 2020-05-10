@@ -1,0 +1,4 @@
+<button class="btn btn-primary" (click) = "onToggleAdd()">Click to Toggle and add into an array</button>
+<p *ngIf = "isClicked" >directtive-assignment works!</p>
+<li *ngFor = "let item of demoArray; let i= index" [ngStyle]="{backgroundColor: i> 5? 'blue': 'transparent'}">{{item}}</li>
+
